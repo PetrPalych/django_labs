@@ -23,10 +23,5 @@ api_v1 = 'api/v1/'
 urlpatterns = [
     path("admin/", admin.site.urls),
     path(api_v1 + "directors", DirectorAPIList.as_view()),
-    path(api_v1 + "directors/<int:pk>", DirectorAPIRetrieve.as_view()),
-    path(api_v1 + "movie", MovieAPIList.as_view()),
-    path(api_v1 + "movie/<int:pk>", MovieAPIRetrieve.as_view()),
-    path(api_v1 + "review", ReviewAPIList.as_view()),
-    path(api_v1 + "review/<int:pk>", RetrieveAPIView.as_view()),
-
+    path(api_v1 + "movies/reviews", MovieAPIList.as_view()),
 ]

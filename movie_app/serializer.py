@@ -6,14 +6,14 @@ class DirectorSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Director
-        fields = "__all__"
+        fields = ["id", "name", "movies_count"]
 
 
 class MovieSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Movie
-        fields = "__all__"
+        fields = ["id", "title", "description", "duration", "director", "all_reviews", "average_rating"]
 
 
 class ReviewSerializer(serializers.ModelSerializer):
